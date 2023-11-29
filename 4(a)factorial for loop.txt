@@ -1,0 +1,31 @@
+// header file
+#include <stdio.h>
+// function heading
+int main()
+{
+    // declaring variables
+    int number;
+    unsigned long long factorial = 1;
+    // output statement
+    printf("Enter a positive integer: ");
+    // input statement
+    scanf("%d", &number);
+    // if (condition)
+    if (number < 0)
+    {
+        // output statement
+        printf("Error: Factorial is not defined for negative numbers.\n");
+    }
+    else
+    {
+        // while loop
+        for (int i = 1; i <= number; i++)
+        {
+            // updating variables
+            factorial *= i;
+        }
+        // output statement
+        printf("Factorial of %d = %llu\n", number, factorial);
+    }
+    return 0;
+}
