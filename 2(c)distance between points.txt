@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <math.h>
+
+// Function heading
+int main() {
+    // Variable declaration
+    int x1, y1, x2, y2;
+    float distance;
+
+    // Output Statement
+    printf("Enter the coordinates of two points (x1 y1 x2 y2):\n");
+
+    // Input Statement
+    scanf("%d %d %d %d", &x1, &y1, &x2, &y2);
+
+    // Formula used
+    distance = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+
+    // Output Statement
+    printf("Distance between points = %.2f\n", distance);
+
+    return 0;
+}
