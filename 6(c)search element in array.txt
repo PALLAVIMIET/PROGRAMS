@@ -1,0 +1,38 @@
+
+//title of program
+//program to search an element in an array using linear method
+//header file
+#include<stdio.h>
+//function heading
+void main() 
+{
+    //declaring variables
+    int arr[30],i;
+    int num, element, found=0;
+    //output statement
+    printf("enter the number of elements");
+    //input statement
+    scanf("%d", &num);
+    //output statement
+    printf("enter the elments");
+    for(i=0;i<num;i++)
+    {
+        //input statement
+        scanf("%d",&element);
+    }
+    printf("enter the element to search");
+    scanf("%d", &element);
+    for(i=0;i<30;i++)
+{
+    if(arr[i]==element)
+     {
+        //output statement
+        printf("element found at the index %d\n",i);
+        found=1;
+        break;
+    }
+}
+if(!found)
+    //output sttement
+    printf("element not found in array");
+}
