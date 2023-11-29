@@ -1,0 +1,21 @@
+#include <stdio.h>
+// Function to find maximum element and index in the array
+int main()
+{
+    int array[11] = {12, 45,12,13,14,7,8,75,123,14,12};
+    int size = sizeof(array) / sizeof(array[0]);
+    // Declaring variables
+    int max = array[0];
+    int index = 0;
+    for (int i = 1; i < size; i++)
+    {
+        if (array[i] > max)
+        {
+            max = array[i];
+            index = i;
+        }
+    }
+    // Output statement
+    printf("The highest element in the array at index %d is %d.\n", index, max);
+    return 0;
+}
