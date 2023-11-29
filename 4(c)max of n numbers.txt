@@ -1,0 +1,28 @@
+//title of program
+//program to find max of n numbers
+#include <stdio.h>
+//function heading
+int main() 
+{
+    //declaring variables
+    int n, i;
+    float num, maximum;
+    //get the number of elements from the user 
+    //output statement 
+    printf("Enter the number of elements: ");
+    //input statement
+    scanf("%d", &n);
+    //initialize the max number to smallest possible value 
+    maximum = -999999999;
+    //iterate through the numbers and find the maximum
+    for (i = 0; i < n; ++i) {
+        printf("Enter number %d: ", i + 1);
+        scanf("%f", &num);
+        if (num > maximum) 
+        {
+            maximum = num;
+        }
+    }
+    printf("The maximum number is: %f\n", maximum); 
+    return 0;
+}
