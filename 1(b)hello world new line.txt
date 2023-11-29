@@ -1,0 +1,11 @@
+//title of program
+//program to print hello world using new line character
+//header file
+#include <stdio.h>
+//function heading
+int main()
+{
+    //output statement
+    printf("hello world\n");
+    return 0;
+}
