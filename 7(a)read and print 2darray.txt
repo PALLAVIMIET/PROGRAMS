@@ -1,0 +1,26 @@
+
+//title of program
+//program to read and print elements of two dimensional array
+//header file
+#include<stdio.h>
+//function heading
+void main() 
+{
+
+    int a[3][3];
+    //output statement
+    printf("Enter the array elements:\n");
+    for(int i=0; i<3; i++)
+    for(int j=0; j<3; j++)
+    //input statement
+    scanf("%d",&a[i][j]);
+    //output statement
+    printf("To print the array values\n");
+    for(int i=0; i<3; i++) 
+   {
+
+        for(int j=0; j<3; j++)
+        printf("%d\t", a[i][j]);
+        printf("\n");
+    }
+}
