@@ -1,0 +1,70 @@
+// header file
+#include <stdio.h>
+#include <math.h>
+
+// function heading
+void calculate_area_perimeter() 
+{
+    // variable declaration
+    int n, area, per, length, breadth, Side, radius;
+    printf("Enter your choice:\n1. for area of circle\n2. for area of rectangle\n3. for area of square\n");
+    scanf("%d", &n);
+    switch (n) 
+    {
+        case 1:
+            // output statement
+            printf("Enter the radius of the circle: ");
+            // input statement
+            scanf("%d", &radius);
+            // formula used
+            area = 3.14159 * pow(radius, 2); 
+            // Output statement
+            printf("Area of the circle = %.2f", area);
+            // formula used
+            per = 2 * 3.14159 * radius; 
+            // Output statement
+            printf("Perimeter of the circle = %.2f", per);
+            break;
+        case 2:
+            // output statement
+            printf("Enter the length of the rectangle: ");
+            // input statement
+            scanf("%d", &length);
+            // output statement
+            printf("Enter the breadth of the rectangle: ");
+            // input statement
+            scanf("%d", &breadth);
+            // formula used
+            area = length * breadth; // Output statement
+            printf("Area of the rectangle = %.2f", area);
+            // formula used
+            per = 2 * (length + breadth); 
+            // Output statement
+            printf("Perimeter of the rectangle = %.2f", per);
+            break;
+        case 3:
+            // output statement
+            printf("Enter the side of the square: ");
+            // input statement
+            scanf("%d", &Side);
+            // formula used
+            area = pow(Side, 2); // Output statement
+            printf("Area of the square = %.2f", area);
+            // formula used
+            per = 4 * Side; 
+            // Output statement
+            printf("Perimeter of the square = %.2f", per);
+            break;
+        default:
+            printf("Invalid choice. Please choose 1-3.");
+            break;
+    }
+}
+
+// Main function
+int main() 
+{
+    // calling function
+    calculate_area_perimeter();
+    return 0;
+}
