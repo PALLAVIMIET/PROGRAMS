@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main () 
+    {
+    FILE *file_write = fopen("example.txt", "w");
+    if (file_write == NULL)
+    {
+        printf("Error opening file for writing");
+        return 1;
+    }
+    fprintf(file_write, "Hello, the world and the & a statement\n");
+    fclose(file_write);
+    printf("Successfully wrote to file\n");
+    FILE *file_read = fopen("example.txt", "r");
+    if (file_read == NULL) 
+    {
+        printf("Error opening file for reading");
+        return 1;
+    }
+    printf("Content read from the file:\n");
+    char ch;
+    while (fscanf(file_read, "%c", &ch) == 1) 
+    {
+        printf("%c", ch);
+    }
+    fclose(file_read);
+    return 0;
+}
