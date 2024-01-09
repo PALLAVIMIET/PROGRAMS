@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int q1, q2, q3;
+    char fname[30];
+    FILE *ifp, *ofp;
+
+    if ((ifp = fopen("input.txt", "r")) == NULL || (ofp = fopen("output.txt", "w")) == NULL) {
+        printf("Error opening files.\n");
+        exit(1);
+    }
+
+    while (fscanf(ifp, "%d %d %d", &q1, &q2, &q3) == 3) {
+        fprintf(ofp, "%d %d %d\n", q1, q2, q3);
+    }
+
+    printf("Copied the file successfully\n");
+
+    fclose(ifp);
+    fclose(ofp);
+
+    return 0;
+}
