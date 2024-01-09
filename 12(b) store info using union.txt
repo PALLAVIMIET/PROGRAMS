@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    union student {
+        char name[50];
+        int rollNumber;
+        float averageGrade;
+    } stud;
+
+    printf("Enter student roll number: ");
+    scanf("%d", &stud.rollNumber);
+
+    printf("Enter student name: ");
+    scanf("%s", stud.name);
+
+    printf("Enter student average grade: ");
+    scanf("%f", &stud.averageGrade);
+
+    printf("\nStudent Information:\n");
+    printf("Roll Number: %d\n", stud.rollNumber);
+    printf("Name: %s\n", stud.name);
+    printf("Average Grade: %.2f\n", stud.averageGrade);
+
+    return 0;
+}
